@@ -1,26 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <router-link to="/roads" class="navbar-brand">List Road</router-link>
+    <div class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <router-link to="/create" class="nav-link">Create Road</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/" class="nav-link">List District</router-link>
+      </li>
+    </div>
+  </nav>
+  <div class="container mt-3">
+    <router-view />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
